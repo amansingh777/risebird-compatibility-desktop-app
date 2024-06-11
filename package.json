@@ -1,0 +1,87 @@
+{
+  "name": "risebird-interview-launcher",
+  "productName": "RB_System_Compatibilty_Test",
+  "version": "1.0.0",
+  "description": "Risebird System Compatibility Test",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint src --color",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Risebird",
+  "license": "Risebird",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "npm"
+      },
+      "electronWinstallerConfig": {
+        "name": "risebird_system_compatibility_test_electronjs"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "risebirdsystemcompatibilitytestelectronjs"
+      }
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "chrome-remote-interface": "^0.33.0",
+    "electron-compile": "^6.4.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "regedit": "^5.1.3"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "electron": "^21.1.0",
+    "electron-builder": "^23.6.0",
+    "electron-forge": "^5.2.3",
+    "electron-packager": "^16.0.0",
+    "electron-prebuilt-compile": "3.0.10",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "build": {
+    "appId": "risebird.launcher",
+    "mac": {
+      "category": "com.risebird.interview.launcher"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "postinstall": "electron-builder install-app-deps"
+}

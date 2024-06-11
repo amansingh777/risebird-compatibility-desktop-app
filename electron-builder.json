@@ -1,0 +1,12 @@
+{
+    "asar": true,
+    "builds": [
+      {
+        "arch": ["x64"],
+        "asarUnpack": [
+          "./ffmpeg"
+        ]
+      }
+    ],
+    "ffmpegDownloadPath": "./ffmpeg" 
+  }
