@@ -1,8 +1,3 @@
-# Temperature Converter Desktop App
-
-This Code is part of a blog. Please refer to the blog to make the best use of this code.
-The link to the blog is [here](https://adityasridhar.com/posts/desktop-apps-with-html-css-javascript)
-
 ## Pre-requisites
 
 ### Install NodeJS
@@ -15,14 +10,6 @@ Install Electron forge using the following command
 
 ```bash
 npm install -g electron-forge
-```
-
-## Cloning the Code
-
-Clone the Code using the following command
-
-```bash
-git clone https://github.com/aditya-sridhar/simple-desktop-app-electronjs.git
 ```
 
 ## Running the application
